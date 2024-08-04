@@ -1,6 +1,6 @@
 baseURL: "https://samyog.me/"
 title: Home
-icon: /static/hacker.ico
+icon: hacker.ico
 paginate: 5
 theme: PaperMod
 
@@ -44,7 +44,7 @@ params:
 
   label:
     text: "Home"
-    icon: /apple-touch-icon.png
+    icon: ./static/images/hacker.png
     iconHeight: 35
 
   profileMode:

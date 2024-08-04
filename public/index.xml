@@ -36,9 +36,7 @@ Skills: Top Contributed Repo Connect With Me </description>
       <link>http://localhost:1313/blog/iclean/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/iclean/</guid>
-      <description>Overview: iclean
-Recon Nmap: As always start with port scan and other services of iclean using nmap:
-local Linux/iclean » sudo nmap -sC -sV 10.10.11.12 -Pn -vv -oN nmap/iclean Nmap scan report for 10.10.11.12 (10.10.11.12) Host is up, received user-set (0.14s latency). Scanned at 2024-08-03 17:31:08 +0545 for 26s Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 8.9p1 Ubuntu 3ubuntu0.</description>
+      <description>Overview: IClean is a medium-difficulty Linux machine. The website, for a cleaning services company, features a quote request form is vulnerable to Cross-Site Scripting (XSS). This vulnerability allows for the stealing admin cookie and access to the dashboard panel. Server-Side Template Injection (SSTI) is then exploited to gain a reverse shell. Database access reveals a user hash, which is cracked to obtain SSH access. The qpdf tool, running as root, is used to create a PDF and attach /root/root.</description>
     </item>
     <item>
       <title>Imaginary CTF 2024</title>

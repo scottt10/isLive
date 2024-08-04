@@ -12,8 +12,7 @@ icon: https://wolfcareers.com/wp-content/uploads/2023/01/1_cQGpZGkSuehv-YEXUweMQ
 ![alt text](/iclean/iclean.png)
 
 ## Overview:
-iclean 
-
+IClean is a medium-difficulty Linux machine. The website, for a cleaning services company, features a quote request form is vulnerable to Cross-Site Scripting (XSS). This vulnerability allows for the stealing admin cookie and access to the dashboard panel. Server-Side Template Injection (SSTI) is then exploited to gain a reverse shell. Database access reveals a user hash, which is cracked to obtain SSH access. The qpdf tool, running as root, is used to create a PDF and attach `/root/root.txt`, allowing for the retrieval of the root flag.
 
 ## Recon
 ---
@@ -117,11 +116,11 @@ Lets try ssti payload. When we send payload `{{7*7}}` in the qr_link paramter, i
 ![alt text](/iclean/14.png)
 
 
-But when we try the ssti payload it fails. Looks like there is a filter. Found this interesting article.
+But when we try the SSTI payload for RCE, some of the payloads do not work and returns a 500 Internal Server Error. It looks like there is a filter in place. I found an interesting article on this topic.
 
 **Article:** https://medium.com/@nyomanpradipta120/jinja2-ssti-filter-bypasses-a8d3eb7b000f.
 
-Now after testing we find out that `_` is filtered so we bypass it using `\x5f`. We got RCE.
+We can achieve RCE by replacing underscores with the hexadecimal escape sequence `\x5f`. This allows us to bypass filtering checks but during rendering, `\x5f` will be converted back to underscores.
 ![alt text](/iclean/15.png)
 
 We now add the reverse shell payload to the ssti payload.

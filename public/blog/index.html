@@ -108,7 +108,7 @@
     <nav class="nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="Home (Alt + H)">
-                <img src="http://localhost:1313/apple-touch-icon.png" alt="" aria-label="logo"
+                <img src="http://localhost:1313/static/images/hacker.png" alt="" aria-label="logo"
                     height="35">Home</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
@@ -204,11 +204,9 @@ nmap -sS -sV -sC -vv -oA nmap/sau 10.10.11.224 HTTP Visiting the website on port
     </h2>
   </header>
   <div class="entry-content">
-    <p>Overview: iclean
-Recon Nmap: As always start with port scan and other services of iclean using nmap:
-local Linux/iclean » sudo nmap -sC -sV 10.10.11.12 -Pn -vv -oN nmap/iclean Nmap scan report for 10.10.11.12 (10.10.11.12) Host is up, received user-set (0.14s latency). Scanned at 2024-08-03 17:31:08 &#43;0545 for 26s Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 8.9p1 Ubuntu 3ubuntu0....</p>
+    <p>Overview: IClean is a medium-difficulty Linux machine. The website, for a cleaning services company, features a quote request form is vulnerable to Cross-Site Scripting (XSS). This vulnerability allows for the stealing admin cookie and access to the dashboard panel. Server-Side Template Injection (SSTI) is then exploited to gain a reverse shell. Database access reveals a user hash, which is cracked to obtain SSH access. The qpdf tool, running as root, is used to create a PDF and attach /root/root....</p>
   </div>
-  <footer class="entry-footer">5 min&nbsp;·&nbsp;922 words&nbsp;·&nbsp;Scott</footer>
+  <footer class="entry-footer">5 min&nbsp;·&nbsp;1039 words&nbsp;·&nbsp;Scott</footer>
   <a class="entry-link" aria-label="post link to HTB - iclean" href="http://localhost:1313/blog/iclean/"></a>
 </article>
     </main>
