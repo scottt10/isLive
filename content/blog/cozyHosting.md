@@ -4,7 +4,7 @@ pin: true
 layout: ""
 author: [ Scott & Jolicious ]
 math: true
-date: 2024-03-05 
+date: 2024-02-20 11:27:22 +00:00
 mermaid: true
 icon: https://wolfcareers.com/wp-content/uploads/2023/01/1_cQGpZGkSuehv-YEXUweMQ-e1672674616339.webp
 ---
@@ -52,7 +52,7 @@ The TCP Port 80 didnot follow redirection. So adding `cozyhosting.htb` at /etc/h
 
 ![1](/cozyhos/1.png)
 
-This site seems like to be web hosting. while navigating the website there is login page . Jump into their.
+This site seems like to be web hosting while navigating the website there is login page . Jump into their.
 
 ![alt text](/cozyhos/2.png)
 

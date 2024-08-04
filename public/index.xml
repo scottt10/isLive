@@ -4,32 +4,41 @@
     <title>Home</title>
     <link>http://localhost:1313/</link>
     <description>Recent content on Home</description>
-    <generator>Hugo -- 0.129.0</generator>
+    <generator>Hugo -- 0.131.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Feb 2024 11:27:22 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTB - CozyHosting</title>
       <link>http://localhost:1313/blog/cozyhosting/</link>
-      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Feb 2024 11:27:22 +0000</pubDate>
       <guid>http://localhost:1313/blog/cozyhosting/</guid>
       <description>Overview: CozyHosting is an Linux Easy Machine that features a Spring Boot application. The Actuator endpoint has access to get mappings and sessions. A user&amp;rsquo;s session cookie can be found by enumerating the endpoint, which grants authenticated access to the main dashboard. The program is susceptible to command injection, which can be used to take control of the remote computer and obtain a reverse shell. By counting the JAR files in the application, hardcoded login credentials are found and utilized to access the local database.</description>
     </item>
     <item>
+      <title>HTB - Sau</title>
+      <link>http://localhost:1313/blog/sau/</link>
+      <pubDate>Sun, 18 Feb 2024 11:27:22 +0000</pubDate>
+      <guid>http://localhost:1313/blog/sau/</guid>
+      <description>Recon: An initial Nmap scan reveal 3 ports open. SSH on port 22, http on port 80 which looks like it is filtered, and it looks like http on port 55555 which is an unusual port for http.
+nmap -sS -sV -sC -vv -oA nmap/sau 10.10.11.224 HTTP Visiting the website on port 55555. We are presented with a page to create new basket to inspect HTTP requests. At the bottom of the page, it also leaks the version that is being used to create the website which is 1.</description>
+    </item>
+    <item>
       <title></title>
-      <link>http://localhost:1313/profile/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/profile/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>Hey I am Sylph404, a passionate Penetration Tester and MERN stack developer
 Skills: Top Contributed Repo Connect With Me </description>
     </item>
     <item>
-      <title>HTB - Sau</title>
-      <link>http://localhost:1313/blog/sau/</link>
+      <title>HTB - iclean</title>
+      <link>http://localhost:1313/blog/iclean/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/sau/</guid>
-      <description>Recon: An initial Nmap scan reveal 3 ports open. SSH on port 22, http on port 80 which looks like it is filtered, and it looks like http on port 55555 which is an unusual port for http.
-nmap -sS -sV -sC -vv -oA nmap/sau 10.10.11.224 HTTP Visiting the website on port 55555. We are presented with a page to create new basket to inspect HTTP requests. At the bottom of the page, it also leaks the version that is being used to create the website which is 1.</description>
+      <guid>http://localhost:1313/blog/iclean/</guid>
+      <description>Overview: iclean
+Recon Nmap: As always start with port scan and other services of iclean using nmap:
+local Linux/iclean » sudo nmap -sC -sV 10.10.11.12 -Pn -vv -oN nmap/iclean Nmap scan report for 10.10.11.12 (10.10.11.12) Host is up, received user-set (0.14s latency). Scanned at 2024-08-03 17:31:08 +0545 for 26s Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 8.9p1 Ubuntu 3ubuntu0.</description>
     </item>
     <item>
       <title>Imaginary CTF 2024</title>

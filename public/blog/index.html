@@ -181,7 +181,7 @@
   <div class="entry-content">
     <p>Overview: CozyHosting is an Linux Easy Machine that features a Spring Boot application. The Actuator endpoint has access to get mappings and sessions. A user’s session cookie can be found by enumerating the endpoint, which grants authenticated access to the main dashboard. The program is susceptible to command injection, which can be used to take control of the remote computer and obtain a reverse shell. By counting the JAR files in the application, hardcoded login credentials are found and utilized to access the local database....</p>
   </div>
-  <footer class="entry-footer"><span title='2024-03-05 00:00:00 +0000 UTC'>Feb 312 , 5050</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;927 words&nbsp;·&nbsp;Scott &amp; Jolicious</footer>
+  <footer class="entry-footer"><span title='2024-02-20 11:27:22 +0000 +0000'>Feb 211 , 202027</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;927 words&nbsp;·&nbsp;Scott &amp; Jolicious</footer>
   <a class="entry-link" aria-label="post link to HTB - CozyHosting" href="http://localhost:1313/blog/cozyhosting/"></a>
 </article>
 
@@ -194,8 +194,22 @@
     <p>Recon: An initial Nmap scan reveal 3 ports open. SSH on port 22, http on port 80 which looks like it is filtered, and it looks like http on port 55555 which is an unusual port for http.
 nmap -sS -sV -sC -vv -oA nmap/sau 10.10.11.224 HTTP Visiting the website on port 55555. We are presented with a page to create new basket to inspect HTTP requests. At the bottom of the page, it also leaks the version that is being used to create the website which is 1....</p>
   </div>
-  <footer class="entry-footer">3 min&nbsp;·&nbsp;490 words&nbsp;·&nbsp;Scott &amp; Jolicious</footer>
+  <footer class="entry-footer"><span title='2024-02-18 11:27:22 +0000 +0000'>Feb 211 , 181827</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;490 words&nbsp;·&nbsp;Scott &amp; Jolicious</footer>
   <a class="entry-link" aria-label="post link to HTB - Sau" href="http://localhost:1313/blog/sau/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">HTB - iclean
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview: iclean
+Recon Nmap: As always start with port scan and other services of iclean using nmap:
+local Linux/iclean » sudo nmap -sC -sV 10.10.11.12 -Pn -vv -oN nmap/iclean Nmap scan report for 10.10.11.12 (10.10.11.12) Host is up, received user-set (0.14s latency). Scanned at 2024-08-03 17:31:08 &#43;0545 for 26s Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 8.9p1 Ubuntu 3ubuntu0....</p>
+  </div>
+  <footer class="entry-footer">5 min&nbsp;·&nbsp;922 words&nbsp;·&nbsp;Scott</footer>
+  <a class="entry-link" aria-label="post link to HTB - iclean" href="http://localhost:1313/blog/iclean/"></a>
 </article>
     </main>
     
